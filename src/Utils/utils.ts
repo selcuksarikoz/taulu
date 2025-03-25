@@ -3,8 +3,8 @@
 // export const initOAuthClient = () => {
 //   return new OAuth2Client({
 //     clientId:
-//       "945425986788-6o324ot7eqb9irg6pvqnmg6s92s0dn9m.apps.googleusercontent.com",
-//     clientSecret: "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",
+//       ,
+//     clientSecret: ,
 //     redirectUri: "urn:ietf:wg:oauth:2.0:oob",
 //   });
 // };
