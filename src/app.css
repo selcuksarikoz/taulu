@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  /* Original Candy Colors */
+  --color-candy-strawberry: oklch(
+    0.72 0.29 0
+  ); /* #FF6B6B - vibrant strawberry */
+  --color-candy-orange: oklch(0.78 0.24 45); /* #FF9F68 - bright orange */
+  --color-candy-lemon: oklch(0.92 0.16 90); /* #FFE66D - lemon drop */
+  --color-candy-lime: oklch(0.86 0.18 140); /* #A4DE02 - lime green */
+  --color-candy-mint: oklch(0.8 0.17 175); /* #4ECDC4 - mint */
+  --color-candy-blueberry: oklch(0.65 0.25 265); /* #556DC8 - blueberry */
+  --color-candy-grape: oklch(0.6 0.27 290); /* #7F66FF - grape */
+  --color-candy-bubblegum: oklch(0.68 0.28 335); /* #F25CAF - bubblegum */
+  /* Cloud Candy Colors - EXTREMELY Soft pastel versions for light mode */
+  --color-cloud-candy-strawberry: oklch(
+    0.97 0.03 0
+  ); /* Super soft strawberry */
+  --color-cloud-candy-strawberry-light: oklch(
+    0.99 0.01 0
+  ); /* Nearly white strawberry */
+  --color-cloud-candy-orange: oklch(0.97 0.03 45); /* Super soft orange */
+  --color-cloud-candy-orange-light: oklch(
+    0.99 0.01 45
+  ); /* Nearly white orange */
+  --color-cloud-candy-lemon: oklch(0.98 0.02 90); /* Super soft lemon */
+  --color-cloud-candy-lemon-light: oklch(0.99 0.01 90); /* Nearly white lemon */
+  --color-cloud-candy-lime: oklch(0.97 0.03 140); /* Super soft lime */
+  --color-cloud-candy-lime-light: oklch(0.99 0.01 140); /* Nearly white lime */
+  --color-cloud-candy-mint: oklch(0.97 0.03 175); /* Super soft mint */
+  --color-cloud-candy-mint-light: oklch(0.99 0.01 175); /* Nearly white mint */
+  --color-cloud-candy-blueberry: oklch(
+    0.97 0.03 265
+  ); /* Super soft blueberry */
+  --color-cloud-candy-blueberry-light: oklch(
+    0.99 0.01 265
+  ); /* Nearly white blueberry */
+  --color-cloud-candy-grape: oklch(0.97 0.03 290); /* Super soft grape */
+  --color-cloud-candy-grape-light: oklch(
+    0.99 0.01 290
+  ); /* Nearly white grape */
+  --color-cloud-candy-bubblegum: oklch(
+    0.97 0.03 335
+  ); /* Super soft bubblegum */
+  --color-cloud-candy-bubblegum-light: oklch(
+    0.99 0.01 335
+  ); /* Nearly white bubblegum */
+  /* Smoke Colors */
+  --color-smoke-light: oklch(0.9 0.02 240); /* #E0E0E2 - light smoke */
+  --color-smoke-medium: oklch(0.75 0.03 235); /* #B9B8BD - medium smoke */
+  --color-smoke-dark: oklch(0.6 0.03 240); /* #8A8895 - dark smoke */
+  --color-smoke-deep: oklch(0.45 0.03 245); /* #5C5B66 - deep smoke */
+  --color-smoke-charcoal: oklch(0.3 0.02 250); /* #36353C - charcoal smoke */
+  /* Cloud Colors */
+  --color-cloud-white: oklch(0.98 0.005 260); /* #F9F9FB - white cloud */
+  --color-cloud-silver: oklch(0.92 0.01 270); /* #E8E9F3 - silver lining */
+  --color-cloud-wisp: oklch(0.85 0.02 275); /* #D6D7E8 - cloud wisp */
+  --color-cloud-shadow: oklch(0.8 0.03 280); /* #BBBFD0 - cloud shadow */
+  --color-cloud-storm: oklch(0.7 0.04 285); /* #9FA3B8 - storm cloud */
+  /* Light Mode Colors (Default) */
+  --color-bg-primary: oklch(0.98 0.005 260); /* #F9F9FB - white cloud */
+  --color-bg-secondary: oklch(
+    0.95 0.015 265
+  ); /* #F0F1F7 - off-white with hint of blue */
+  --color-card: oklch(1 0 0); /* #ffffff - pure white */
+  --color-border: oklch(0.92 0.01 270); /* #E8E9F3 - silver lining */
+  --color-shadow: oklch(0.75 0.02 270 / 0.1); /* shadow with transparency */
+  --color-text-primary: oklch(
+    0.25 0.02 260
+  ); /* #232428 - near black with hint of blue */
+  --color-text-secondary: oklch(0.45 0.03 255); /* #55565E - darker gray */
+  --color-text-tertiary: oklch(0.6 0.02 260); /* #7F8087 - medium gray */
+  /* Semantic Colors (Light Mode Default) */
+  --color-primary: var(--color-candy-blueberry);
+  --color-secondary: var(--color-candy-mint);
+  --color-success: oklch(0.76 0.16 155); /* #5CB85C - success green */
+  --color-warning: var(--color-candy-lemon);
+  --color-danger: var(--color-candy-strawberry);
+  --color-info: var(--color-candy-blueberry);
+}
+
+@theme dark {
+  --color-bg-primary: oklch(0.23 0.02 265); /* #212529 - deep blue-black */
+  --color-bg-secondary: oklch(
+    0.27 0.03 260
+  ); /* #2A2D36 - slightly lighter than primary */
+  --color-card: oklch(0.35 0.04 262); /* #343a40 - card background */
+  --color-border: oklch(0.45 0.03 245); /* #5C5B66 - deep smoke */
+  --color-shadow: oklch(
+    0.1 0.01 260 / 0.3
+  ); /* darker shadow with transparency */
+  --color-text-primary: oklch(0.98 0.005 260); /* #F9F9FB - white cloud */
+  --color-text-secondary: oklch(0.85 0.02 270); /* #D2D3DE - light gray */
+  --color-text-tertiary: oklch(0.7 0.03 265); /* #A7A9B8 - medium gray */
+  /* Semantic Colors (Dark Mode) */
+  --color-primary: oklch(
+    0.7 0.26 265
+  ); /* #6A7FE3 - brighter blue for dark mode */
+  --color-secondary: oklch(
+    0.85 0.17 175
+  ); /* #5AEFE0 - brighter mint for dark mode */
+  --color-success: oklch(0.8 0.18 155); /* #6DD46D - brighter success green */
+  --color-warning: oklch(0.95 0.17 90); /* #FFEF85 - brighter warning yellow */
+  --color-danger: oklch(0.76 0.29 0); /* #FF8282 - brighter danger red */
+  --color-info: oklch(0.7 0.25 265); /* #6A7FE3 - brighter info blue */
+}
+
+html,
+body,
+#root {
+  background: transparent !important;
+  margin: 0;
+  padding: 0;
+}
+
+.button-animation {
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
