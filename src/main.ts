@@ -64,7 +64,7 @@ async function createWindow() {
 
     if (process.env.NODE_ENV === "development") {
       await mainWindow.loadURL("http://localhost:3000");
-      mainWindow.webContents.openDevTools({ mode: "detach" });
+      // mainWindow.webContents.openDevTools({ mode: "detach" });
     } else {
       // Use the proper file:// protocol and absolute path to index.html
       await mainWindow.loadFile("../dist/index.html");

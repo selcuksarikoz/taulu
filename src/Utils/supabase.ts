@@ -1,8 +1,8 @@
 import { createClient } from "@supabase/supabase-js";
 
 export const supabase = createClient(
-  String(process.env.SUPABASE_URL),
-  String(process.env.SUPABASE_KEY),
+  String(import.meta.env.VITE_SUPABASE_URL),
+  String(import.meta.env.VITE_SUPABASE_KEY),
 );
 
 export const getUserInfo = async (accessToken) => {

@@ -137,9 +137,7 @@ function App(): JSX.Element {
     const isYoutube = extractYouTubeVideoUrl(url);
     const { width, height } = mapDimensions(url);
 
-    console.log(width, height);
-
-    const id = Date.now().toString();
+    const id = crypto.randomUUID();
 
     const web: IAppModel = {
       id,
@@ -165,7 +163,7 @@ function App(): JSX.Element {
   }
 
   async function addNewNote() {
-    const id = Date.now().toString();
+    const id = crypto.randomUUID();
     const note: IAppModel = {
       id,
       content: "",

@@ -34,7 +34,7 @@ export function extractYouTubeVideoUrl(url: string) {
       return url;
     }
 
-    return `https://www.youtube.com/embed/${videoId}?si=${Date.now()}&controls=1&autoplay=1&rel=0`;
+    return `https://www.youtube.com/embed/${videoId}?si=${crypto.randomUUID()}&controls=1&autoplay=1&rel=0`;
   } catch (error) {
     console.error("Error processing YouTube URL:", error);
     return null;

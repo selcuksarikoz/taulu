@@ -119,7 +119,7 @@ export const MacOSDock = memo(
               />
             }
             onClick={showWebSiteModal}
-            tooltip="Add Website"
+            tooltip="Add Website / CMD + ."
           />
 
           <DockItem
@@ -152,7 +152,7 @@ export const MacOSDock = memo(
               />
             }
             onClick={() => handleAppVisibility()}
-            tooltip="Hide"
+            tooltip="Hide / CMD+T"
           />
 
           <DockItem
