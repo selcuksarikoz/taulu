@@ -176,6 +176,9 @@ setupIPC();
 async function createTrayIcon(pictureUrl?: string) {
   try {
     let trayIcon;
+    const iconPath = path.join(__dirname, "../../images/tray-icon.png");
+
+    console.log(iconPath);
 
     if (pictureUrl) {
       // Get image from URL
@@ -183,15 +186,11 @@ async function createTrayIcon(pictureUrl?: string) {
 
       // If failed to get image, use default
       if (!trayIcon) {
-        trayIcon = nativeImage.createFromPath(
-          path.join(__dirname, "../images/tray-icon.png"),
-        );
+        trayIcon = nativeImage.createFromPath(iconPath);
       }
     } else {
       // Use default icon with proper path
-      trayIcon = nativeImage.createFromPath(
-        path.join(__dirname, "../images/tray-icon.png"),
-      );
+      trayIcon = nativeImage.createFromPath(iconPath);
     }
 
     // Resize icon to appropriate size for tray (16x16 or 32x32 recommended)
